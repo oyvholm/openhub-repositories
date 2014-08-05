@@ -1,0 +1,15 @@
+#!/usr/bin/gnuplot -persist
+
+# File ID: ccf32478-1c7d-11e4-af72-000df06acc56
+
+set xdata time
+set grid
+set timefmt "%Y-%m-%dT%H:%M:%SZ"
+set format x "%Y-%m-%d %H:%M:%S"
+set yrange [0.1:]
+plot \
+"repos.dat" using 1:2 title "Bazaar" w lp pt 3, \
+"repos.dat" using 1:3 title "CVS" w lp pt 3, \
+"repos.dat" using 1:4 title "Git" w lp pt 3, \
+"repos.dat" using 1:5 title "Mercurial" w lp pt 3, \
+"repos.dat" using 1:6 title "Subversion" w lp pt 3
