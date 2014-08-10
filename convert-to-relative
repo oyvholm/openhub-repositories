@@ -1,0 +1,40 @@
+#!/usr/bin/perl
+
+#=======================================================================
+# convert-to-relative
+# File ID: 55d642ae-20dc-11e4-ad57-c80aa9e67bbd
+# Convert repos.dat to a data set where every graph starts at zero.
+#
+# Character set: UTF-8
+# ©opyleft 2014– Øyvind A. Holm <sunny@sunbase.org>
+# License: GNU General Public License version 2 or later
+#=======================================================================
+
+use strict;
+use warnings;
+
+exit(main());
+
+sub main {
+    # {{{
+    my $Retval = 0;
+    while (<>) {
+        if (/^(20.*?)\s(\d+)\s(\d+)\s(\d+)\s(\d+)\s(\d+)/) {
+            # FIXME: Quick and dirty hardcoding
+            printf("%s %u %u %u %u %u\n",
+                $1,
+                $2 - 12933,
+                $3 - 62746,
+                $4 - 250917,
+                $5 - 17835,
+                $6 - 325136,
+            );
+        } else {
+            print;
+        }
+    }
+    return($Retval);
+    # }}}
+} # main()
+
+# vim: set fenc=UTF-8 ft=perl fdm=marker ts=4 sw=4 sts=4 et fo+=w :
