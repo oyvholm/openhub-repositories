@@ -6,3 +6,8 @@ all:
 	./plot-graph repos.dat
 	./convert-to-relative repos.dat >relative.dat
 	./plot-graph relative.dat
+
+bezier:
+	./plot-graph --bezier repos.dat
+	./convert-to-relative repos.dat >relative.dat
+	./plot-graph --bezier relative.dat
