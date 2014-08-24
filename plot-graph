@@ -2,6 +2,13 @@
 
 # File ID: ccf32478-1c7d-11e4-af72-000df06acc56
 
+test "$1" = "--bezier" && { use_bezier=1; shift; } || unset use_bezier
+
+graph() {
+    local lt=$1
+    test -n "$use_bezier" && echo w l s b lt $lt || echo w lp pt 3 lt $lt
+}
+
 cat <<END | gnuplot -persist
 set xdata time
 set grid
@@ -9,14 +16,9 @@ set timefmt "%Y-%m-%dT%H:%M:%SZ"
 set format x "%Y-%m-%d %H:%M:%S"
 set yrange [0.1:]
 plot \
-"$1" using 1:2 title "Bazaar" w lp pt 3 lt 1, \
-"$1" using 1:2 title "Bazaar" w l s b lt 1 lw 3, \
-"$1" using 1:3 title "CVS" w lp pt 3 lt 2, \
-"$1" using 1:3 title "CVS" w l s b lt 2 lw 3, \
-"$1" using 1:4 title "Git" w lp pt 3 lt 3, \
-"$1" using 1:4 title "Git" w l s b lt 3 lw 3, \
-"$1" using 1:5 title "Mercurial" w lp pt 3 lt 4, \
-"$1" using 1:5 title "Mercurial" w l s b lt 4 lw 3, \
-"$1" using 1:6 title "Subversion" w lp pt 3 lt 5, \
-"$1" using 1:6 title "Subversion" w l s b lt 5 lw 3
+"$1" using 1:2 title "Bazaar" $(graph 1), \
+"$1" using 1:3 title "CVS" $(graph 2), \
+"$1" using 1:4 title "Git" $(graph 3), \
+"$1" using 1:5 title "Mercurial" $(graph 4), \
+"$1" using 1:6 title "Subversion" $(graph 5)
 END
