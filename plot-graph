@@ -6,7 +6,7 @@ test "$1" = "--bezier" && { use_bezier=1; shift; } || unset use_bezier
 
 graph() {
     local lt=$1
-    test -n "$use_bezier" && echo w l s b lt $lt || echo w lp pt 3 lt $lt
+    test -n "$use_bezier" && echo w l s b lt $lt || echo w lp pt 7 lt $lt
 }
 
 cat <<END | gnuplot -persist
