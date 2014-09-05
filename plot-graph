@@ -19,9 +19,9 @@ set timefmt "%Y-%m-%dT%H:%M:%SZ"
 set format x "%Y-%m-%d %H:%M:%S"
 set yrange [0.1:]
 plot \
-$(graph 1 Bazaar), \
-$(graph 2 CVS), \
-$(graph 3 Git), \
-$(graph 4 Mercurial), \
+$(graph 1 Bazaar), \\
+$(graph 2 CVS), \\
+$(graph 3 Git), \\
+$(graph 4 Mercurial), \\
 $(graph 5 Subversion)
 END
