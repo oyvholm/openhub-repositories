@@ -16,7 +16,7 @@ cat <<END | gnuplot -persist
 set xdata time
 set grid
 set timefmt "%Y-%m-%dT%H:%M:%SZ"
-set format x "%Y-%m-%d %H:%M:%S"
+set format x "%Y-%m-%d"
 set yrange [0.1:]
 plot \
 $(graph 1 Bazaar), \\
