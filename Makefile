@@ -17,3 +17,7 @@ sort:
 	mv repos.dat.tmp repos.dat
 	sort -u dups.dat >dups.dat.tmp
 	mv dups.dat.tmp dups.dat
+
+dups:
+	cat repos.dat >>dups.dat
+	make sort
