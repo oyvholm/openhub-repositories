@@ -21,3 +21,4 @@ sort:
 dups:
 	cat repos.dat >>dups.dat
 	make sort
+	git checkout -f repos.dat
