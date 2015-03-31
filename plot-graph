@@ -47,5 +47,5 @@ $(graph 2 1 Bazaar), \\
 $(graph 3 2 CVS), \\
 $(graph 4 3 Git), \\
 $(graph 5 4 Mercurial), \\
-$(graph 6 5 Subversion)
+$(graph 6 6 Subversion)
 END
