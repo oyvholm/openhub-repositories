@@ -12,14 +12,14 @@ I've been monitoring this since 2014-08-05 to see how things were
 developing, and it's a good indication of the popularity of the various 
 version control systems. Generated SVG graphs are stored in `graph/`:
 
-- **`relative.svg`**<br />
+- [**`relative.svg`**](graph/relative.svg)<br />
   Show graphs of relative growth between the various version control 
   systems.
-- **`relative-zoom.svg`**<br />
+- [**`relative-zoom.svg`**](graph/relative-zoom.svg)<br />
   Same as `relative.svg`, but since the Git graph dwarfs all the others, 
   this is a zoomed-in version to show the differences between Bazaar, 
   CVS, Mercurial and Subversion better.
-- **`repos.svg`**<br />
+- [**`repos.svg`**](graph/repos.svg)<br />
   Graph of total number of repositories.
 
 Usage
