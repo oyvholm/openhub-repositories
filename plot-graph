@@ -4,6 +4,7 @@
 
 test "$1" = "--bezier" && { use_bezier=1; shift; } || unset use_bezier
 test "$1" = "--svg" && { use_svg=1; shift; } || unset use_svg
+test "$1" = "--zoom" && { use_zoom=1; shift; } || unset use_zoom
 file="$1"
 filebase="$(basename "$1" .dat)"
 
@@ -16,10 +17,20 @@ graph() {
 
 set_svg() {
     if test "$use_svg" = "1"; then
+        test "$use_zoom" = "1" && { svg_str="-zoom"; } || unset svg_str
         echo set terminal svg size 800,600
-        echo set output \"graph/$filebase.svg\"
+        echo set output \"graph/$filebase$svg_str.svg\"
         echo set object 1 rect from screen 0, 0, 0 to screen 1, 1, 0 behind
         echo set object 1 rect fc  rgb \"white\"  fillstyle solid 1.0
+    fi
+}
+
+set_yrange() {
+    if test "$use_zoom" = "1"; then
+        maxcount=$(cut -f 2,3,5,6 -d ' ' "$file" | fmt -1 | sort -n | tail -1)
+        echo "set yrange [0.1:$maxcount]"
+    else
+        echo "set yrange [0.1:]"
     fi
 }
 
@@ -29,7 +40,7 @@ set xdata time
 set grid
 set timefmt "%Y-%m-%dT%H:%M:%SZ"
 set format x "%Y-%m-%d"
-set yrange [0.1:]
+$(set_yrange)
 plot \
 $(graph 1 Bazaar), \\
 $(graph 2 CVS), \\
