@@ -3,7 +3,9 @@
 # File ID: ccf32478-1c7d-11e4-af72-000df06acc56
 
 test "$1" = "--bezier" && { use_bezier=1; shift; } || unset use_bezier
+test "$1" = "--svg" && { use_svg=1; shift; } || unset use_svg
 file="$1"
+filebase="$(basename "$1" .dat)"
 
 graph() {
     local lt=$1
@@ -12,7 +14,17 @@ graph() {
     test -n "$use_bezier" && echo w l s b lt $lt || echo w lp pt 7 lt $lt
 }
 
+set_svg() {
+    if test "$use_svg" = "1"; then
+        echo set terminal svg size 800,600
+        echo set output \"graph/$filebase.svg\"
+        echo set object 1 rect from screen 0, 0, 0 to screen 1, 1, 0 behind
+        echo set object 1 rect fc  rgb \"white\"  fillstyle solid 1.0
+    fi
+}
+
 cat <<END | gnuplot -persist
+$(set_svg)
 set xdata time
 set grid
 set timefmt "%Y-%m-%dT%H:%M:%SZ"
