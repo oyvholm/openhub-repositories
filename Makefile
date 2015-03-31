@@ -6,16 +6,19 @@ all:
 	./plot-graph repos.dat
 	./convert-to-relative repos.dat >relative.dat
 	./plot-graph relative.dat
+	./plot-graph --zoom relative.dat
 
 bezier:
 	./plot-graph --bezier repos.dat
 	./convert-to-relative repos.dat >relative.dat
 	./plot-graph --bezier relative.dat
+	./plot-graph --bezier --zoom relative.dat
 
 svg:
 	./plot-graph --svg repos.dat
 	./convert-to-relative repos.dat >relative.dat
 	./plot-graph --svg relative.dat
+	./plot-graph --svg --zoom relative.dat
 
 sort:
 	sort -u repos.dat >repos.dat.tmp
