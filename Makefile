@@ -12,6 +12,11 @@ bezier:
 	./convert-to-relative repos.dat >relative.dat
 	./plot-graph --bezier relative.dat
 
+svg:
+	./plot-graph --svg repos.dat
+	./convert-to-relative repos.dat >relative.dat
+	./plot-graph --svg relative.dat
+
 sort:
 	sort -u repos.dat >repos.dat.tmp
 	mv repos.dat.tmp repos.dat
