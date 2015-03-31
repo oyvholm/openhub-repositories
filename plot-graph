@@ -44,7 +44,7 @@ set format x "%Y-%m-%d"
 $(set_yrange)
 plot \
 $(graph 2 1 Bazaar), \\
-$(graph 3 2 CVS), \\
+$(graph 3 7 CVS), \\
 $(graph 4 3 Git), \\
 $(graph 5 4 Mercurial), \\
 $(graph 6 6 Subversion)
