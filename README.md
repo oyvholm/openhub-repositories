@@ -2,7 +2,7 @@ README for openhub-repositories.git
 ===================================
 
 openhub.net (formerly ohloh.net) has an interesting comparison of the 
-number of public repositories on the net, based on searches on popular 
+number of public repositories on the net, based on searches of popular 
 hosting services. This comparison is available at 
 &lt;<https://www.openhub.net/repositories/compare>&gt; and shows an 
 estimated market share between Bazaar, CVS, Git, Mercurial and 
