@@ -13,7 +13,7 @@ graph() {
     local lt=$2
     local title=$3
     printf '"%s" using 1:%u title "%s" ' "$file" "$column" "$title"
-    test -n "$use_bezier" && echo w l s b lt $lt || echo w lp pt 7 lt $lt
+    test -n "$use_bezier" && echo w l s b lt $lt || echo w lp pt 1 lt $lt
 }
 
 set_svg() {
