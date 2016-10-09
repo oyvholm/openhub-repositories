@@ -33,5 +33,5 @@ sort:
 .PHONY: dups
 dups:
 	cat repos.dat >>dups.dat
-	make sort
+	$(MAKE) sort
 	git checkout -f repos.dat
