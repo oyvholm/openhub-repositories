@@ -13,7 +13,8 @@ graph() {
     local lt=$2
     local title=$3
     printf '"%s" using 1:%u title "%s" ' "$file" "$column" "$title"
-    test -n "$use_bezier" && echo w l s b lt $lt || echo w lp pt 1 lt $lt
+    test -n "$use_bezier" && echo w l s b lt rgb \"$lt\" ||
+        echo w lp pt 1 lt rgb \"$lt\"
 }
 
 set_svg() {
@@ -43,9 +44,9 @@ set timefmt "%Y-%m-%dT%H:%M:%SZ"
 set format x "%Y-%m-%d"
 $(set_yrange)
 plot \
-$(graph 2 1 Bazaar), \\
-$(graph 3 7 CVS), \\
-$(graph 4 3 Git), \\
-$(graph 5 4 Mercurial), \\
-$(graph 6 6 Subversion)
+$(graph 2 red Bazaar), \\
+$(graph 3 blue CVS), \\
+$(graph 4 green Git), \\
+$(graph 5 cyan Mercurial), \\
+$(graph 6 magenta Subversion)
 END
