@@ -2,24 +2,31 @@
 
 # File ID: 3eaf2bda-20dd-11e4-a0e2-c80aa9e67bbd
 
-.PHONY: plot
-plot:
-	./plot-graph repos.dat
+.PHONY: default
+default: plot
+
+relative.dat: repos.dat
 	./convert-to-relative repos.dat >relative.dat
+
+.PHONY: clean
+clean:
+	rm -fv relative.dat
+
+.PHONY: plot
+plot: relative.dat
+	./plot-graph repos.dat
 	./plot-graph relative.dat
 	./plot-graph --zoom relative.dat
 
 .PHONY: bezier
-bezier:
+bezier: relative.dat
 	./plot-graph --bezier repos.dat
-	./convert-to-relative repos.dat >relative.dat
 	./plot-graph --bezier relative.dat
 	./plot-graph --bezier --zoom relative.dat
 
 .PHONY: svg
-svg:
+svg: relative.dat
 	./plot-graph --svg repos.dat
-	./convert-to-relative repos.dat >relative.dat
 	./plot-graph --svg relative.dat
 	./plot-graph --svg --zoom relative.dat
 
