@@ -29,9 +29,14 @@ Usage
 - **`./get-new-stats.py`**<br />
   Update `repos.dat` with new data from `openhub.net`.
 - **`make`**<br />
-  Create plots with Gnuplot for local viewing.
+  Create `repos.sql` and `repos.sqlite`, tables with stats and plots 
+  with Gnuplot for local viewing.
+- **`make plot`**<br />
+  Generate Gnuplot graphs.
 - **`make bezier`**<br />
-  Same as `make`, but use Bézier smoothing.
+  Same as `make plot`, but use Bézier smoothing.
+- **`make report`**<br />
+  Create some tables with statistics.
 - **`make repos.sqlite`**<br />
   Create the SQLite database.
 - **`make repos.sql`**<br />

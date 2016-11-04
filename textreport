@@ -1,0 +1,118 @@
+#!/bin/bash
+
+#==============================================================================
+# textreport
+# File ID: c7d15602-a00d-11e6-8f51-dad378945b90
+#
+# Create some stats from repos.sqlite
+#
+# Author: Øyvind A. Holm <sunny@sunbase.org>
+# License: GNU General Public License version 2 or later.
+#==============================================================================
+
+progname=textreport
+VERSION=0.1.0
+
+db=repos.sqlite
+
+gencols() {
+	local form="$*"
+	local comma=""
+	local f
+	for f in bazaar cvs git mercurial subversion; do
+		echo "$comma $(echo "$form" | sed s/§/$f/g) AS $f"
+		comma=","
+	done
+}
+
+gensel() {
+	local form="$*"
+	echo "
+.width -10 -10 -10 -10 -10
+SELECT $(gencols "$form") FROM repos;
+" | sqlite3 -column -header "$db"
+}
+
+test -f repos.sqlite || make repos.sqlite || {
+	echo $progname: Could not create repos.sqlite >&2
+	exit 1
+}
+
+startdate="$(sqlite3 "$db" "SELECT min(date) FROM repos;")"
+
+instotal() {
+	local name="$1"
+	local form="$2"
+	echo "
+INSERT INTO tmp
+VALUES (
+  '$name',
+  (SELECT $form FROM repos),
+  (SELECT 100.0 * ($form) / $totalrepos FROM repos)
+);
+"
+}
+
+totals() {
+	echo "
+SELECT name, val, printf('(%.02f%%)', percent) FROM tmp ORDER BY val DESC;
+SELECT '----------', '------', '---------';
+SELECT 'Total', $totalrepos,
+  printf('(%.02f%%)', (SELECT sum(percent) FROM tmp));
+"
+}
+
+echo
+echo Repository statistics from Open Hub, last updated $(
+    sqlite3 "$db" "SELECT max(date) FROM repos;"
+) UTC
+
+totalrepos="$(sqlite3 "$db" "
+SELECT
+  max(bazaar) + max(cvs) + max(git) + max(mercurial) + max(subversion)
+  FROM repos;
+")"
+
+echo
+echo Total number of repositories:
+echo
+echo "
+.width 10 -6 -9
+CREATE TEMPORARY TABLE tmp (name TEXT, val INTEGER, percent REAL);
+$(instotal bazaar "max(bazaar)")
+$(instotal cvs "max(cvs)")
+$(instotal git "max(git)")
+$(instotal mercurial "max(mercurial)")
+$(instotal subversion "max(subversion)")
+$(totals)
+" | sqlite3 -column repos.sqlite
+echo
+
+totalrepos="$(sqlite3 "$db" "
+SELECT
+  max(bazaar) - min(bazaar) + max(cvs) - min(cvs) + max(git) - min(git) +
+  max(mercurial) - min(mercurial) + max(subversion) - min(subversion)
+  FROM repos;
+")"
+
+echo New repositories since $startdate UTC:
+echo
+echo "
+.width 10 -6 -9
+CREATE TEMPORARY TABLE tmp (name TEXT, val INTEGER, percent REAL);
+$(instotal bazaar "max(bazaar)-min(bazaar)")
+$(instotal cvs "max(cvs)-min(cvs)")
+$(instotal git "max(git)-min(git)")
+$(instotal mercurial "max(mercurial)-min(mercurial)")
+$(instotal subversion "max(subversion)-min(subversion)")
+$(totals)
+" | sqlite3 -column repos.sqlite
+echo
+
+echo New repositories per week:
+echo
+gensel "round((max(§) - min(§)) /
+        (julianday(max(date)) - julianday(min(date))) * 7, 2)"
+echo
+
+# vim: set ts=8 sw=8 sts=8 noet fo+=w tw=79 fenc=UTF-8 :
