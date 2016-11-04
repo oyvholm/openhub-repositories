@@ -2,6 +2,9 @@
 
 # File ID: ccf32478-1c7d-11e4-af72-000df06acc56
 
+progname=plot-graph
+VERSION=0.1.0
+
 test "$1" = "--bezier" && { use_bezier=1; shift; } || unset use_bezier
 test "$1" = "--svg" && { use_svg=1; shift; } || unset use_svg
 test "$1" = "--zoom" && { use_zoom=1; shift; } || unset use_zoom

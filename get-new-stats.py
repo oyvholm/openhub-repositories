@@ -12,6 +12,9 @@ Author: Øyvind A. Holm <sunny@sunbase.org>
 import json
 import time
 
+progname = 'get-new-stats.py'
+__version__ = '0.1.0'
+
 def get_http(url):
     import urllib.request
     response = urllib.request.urlopen(url)
