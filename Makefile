@@ -10,6 +10,10 @@ relative.dat: repos.dat Makefile
 repos.sql: repos.dat Makefile
 	./create-sql repos.dat >repos.sql
 
+repos.sqlite: repos.sql Makefile
+	rm -f repos.sqlite
+	sqlite3 repos.sqlite <repos.sql
+
 .PHONY: bezier
 bezier: relative.dat
 	./plot-graph --bezier repos.dat
@@ -18,7 +22,7 @@ bezier: relative.dat
 
 .PHONY: clean
 clean:
-	rm -fv relative.dat repos.sql
+	rm -fv relative.dat repos.sql repos.sqlite
 
 .PHONY: dups
 dups:

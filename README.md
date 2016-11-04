@@ -32,6 +32,8 @@ Usage
   Create plots with Gnuplot for local viewing.
 - **`make bezier`**<br />
   Same as `make`, but use Bézier smoothing.
+- **`make repos.sqlite`**<br />
+  Create the SQLite database.
 - **`make repos.sql`**<br />
   Create repos.sql.
 - **`make svg`**<br />
@@ -50,6 +52,7 @@ Dependencies
 These programs are necessary to run the various `make` commands or 
 `./get-new-stats.py`:
 
+- sqlite3
 - gnuplot
 - Python v3
 - bash or any other Bourne-compatible shell
