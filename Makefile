@@ -4,7 +4,7 @@
 .PHONY: default
 default: plot
 
-relative.dat: repos.dat
+relative.dat: repos.dat Makefile
 	./convert-to-relative repos.dat >relative.dat
 
 .PHONY: bezier
