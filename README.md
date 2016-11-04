@@ -25,6 +25,7 @@ version control systems. Generated SVG graphs are stored in `graph/`:
 Usage
 -----
 
+- **`make update`**<br />
 - **`./get-new-stats.py`**<br />
   Update `repos.dat` with new data from `openhub.net`.
 - **`make`**<br />

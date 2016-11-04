@@ -41,3 +41,7 @@ svg: relative.dat
 	./plot-graph --svg repos.dat
 	./plot-graph --svg relative.dat
 	./plot-graph --svg --zoom relative.dat
+
+.PHONY: update
+update:
+	./get-new-stats.py
