@@ -60,7 +60,7 @@ Download
 
 The scripts, data files and generated SVG graphs are stored in a Git 
 repository at 
-&lt;<https://github.com/sunny256/openhub-repositories>&gt;.
+&lt;<https://gitlab.com/sunny256/openhub-repositories>&gt;.
 
 License
 -------
@@ -80,7 +80,7 @@ Author and contact information
 
 Created by Øyvind A. Holm &lt;<sunny@sunbase.org>&gt;. Patches and 
 suggestions are welcome, please use the issue tracker at 
-&lt;<https://github.com/sunny256/openhub-repositories/issues>&gt; or 
+&lt;<https://gitlab.com/sunny256/openhub-repositories/issues>&gt; or 
 send an email.
 
 ----
