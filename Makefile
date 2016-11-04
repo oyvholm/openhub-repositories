@@ -7,6 +7,9 @@ default: plot
 relative.dat: repos.dat Makefile
 	./convert-to-relative repos.dat >relative.dat
 
+repos.sql: repos.dat Makefile
+	./create-sql repos.dat >repos.sql
+
 .PHONY: bezier
 bezier: relative.dat
 	./plot-graph --bezier repos.dat
@@ -15,7 +18,7 @@ bezier: relative.dat
 
 .PHONY: clean
 clean:
-	rm -fv relative.dat
+	rm -fv relative.dat repos.sql
 
 .PHONY: dups
 dups:

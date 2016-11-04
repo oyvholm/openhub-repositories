@@ -32,6 +32,8 @@ Usage
   Create plots with Gnuplot for local viewing.
 - **`make bezier`**<br />
   Same as `make`, but use Bézier smoothing.
+- **`make repos.sql`**<br />
+  Create repos.sql.
 - **`make svg`**<br />
   Create SVG plots in `graph/`.
 - **`make dups`**<br />

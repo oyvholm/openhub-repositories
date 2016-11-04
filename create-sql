@@ -1,0 +1,60 @@
+#!/usr/bin/env perl
+
+#==============================================================================
+# create-sql
+# File ID: ca78b0ea-9e90-11e6-98f9-e6436a218c69
+#
+# Convert repos.dat to SQL
+#
+# ©opyleft 2016– Øyvind A. Holm <sunny@sunbase.org>
+# License: GNU General Public License version 2 or later
+#==============================================================================
+
+use strict;
+use warnings;
+
+exit(main());
+
+sub main {
+	print(<<END);
+BEGIN TRANSACTION;
+CREATE TABLE repos (
+  date TEXT
+    CONSTRAINT repos_date_length
+      CHECK (length(date) = 19)
+    CONSTRAINT repos_date_valid
+      CHECK (datetime(date) IS NOT NULL)
+    UNIQUE,
+  bazaar INTEGER
+    NOT NULL,
+  cvs INTEGER
+    NOT NULL,
+  git INTEGER
+    NOT NULL,
+  mercurial INTEGER
+    NOT NULL,
+  subversion INTEGER
+    NOT NULL
+);
+END
+
+	while (my $line = <>) {
+		if ($line =~ /^(20.*?)\s(\d+)\s(\d+)\s(\d+)\s(\d+)\s(\d+)/) {
+			my ($date, $bzr, $cvs, $git, $hg, $svn) =
+			   (   $1,   $2,   $3,   $4,  $5,   $6);
+			$date =~ s/T/ /;
+			$date =~ s/Z//;
+			printf("INSERT INTO repos " .
+			       "(%s, %s, %s, %s, %s, %s) " .
+			       "VALUES ('%s', %s, %s, %s, %s, %s);\n",
+			       "date", "bazaar", "cvs",
+			       "git", "mercurial", "subversion",
+			       $date, $bzr, $cvs, $git, $hg, $svn);
+		}
+	}
+
+	print("COMMIT;\n");
+	return 0;
+}
+
+# vim: set ts=8 sw=8 sts=8 noet fo+=w tw=79 fenc=UTF-8 :
