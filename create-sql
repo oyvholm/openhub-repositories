@@ -14,7 +14,7 @@ use strict;
 use warnings;
 
 my $progname = "create-sql";
-my $VERSION = "0.1.0";
+my $VERSION = "0.2.0";
 
 exit(main());
 
@@ -37,7 +37,8 @@ CREATE TABLE repos (
   mercurial INTEGER
     NOT NULL,
   subversion INTEGER
-    NOT NULL
+    NOT NULL,
+  UNIQUE (bazaar, cvs, git, mercurial, subversion)
 );
 END
 
