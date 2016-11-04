@@ -7,27 +7,27 @@ default: plot
 relative.dat: repos.dat
 	./convert-to-relative repos.dat >relative.dat
 
-.PHONY: clean
-clean:
-	rm -fv relative.dat
-
-.PHONY: plot
-plot: relative.dat
-	./plot-graph repos.dat
-	./plot-graph relative.dat
-	./plot-graph --zoom relative.dat
-
 .PHONY: bezier
 bezier: relative.dat
 	./plot-graph --bezier repos.dat
 	./plot-graph --bezier relative.dat
 	./plot-graph --bezier --zoom relative.dat
 
-.PHONY: svg
-svg: relative.dat
-	./plot-graph --svg repos.dat
-	./plot-graph --svg relative.dat
-	./plot-graph --svg --zoom relative.dat
+.PHONY: clean
+clean:
+	rm -fv relative.dat
+
+.PHONY: dups
+dups:
+	cat repos.dat >>dups.dat
+	$(MAKE) sort
+	git checkout -f repos.dat
+
+.PHONY: plot
+plot: relative.dat
+	./plot-graph repos.dat
+	./plot-graph relative.dat
+	./plot-graph --zoom relative.dat
 
 .PHONY: sort
 sort:
@@ -36,8 +36,8 @@ sort:
 	sort -u dups.dat >dups.dat.tmp
 	mv dups.dat.tmp dups.dat
 
-.PHONY: dups
-dups:
-	cat repos.dat >>dups.dat
-	$(MAKE) sort
-	git checkout -f repos.dat
+.PHONY: svg
+svg: relative.dat
+	./plot-graph --svg repos.dat
+	./plot-graph --svg relative.dat
+	./plot-graph --svg --zoom relative.dat
