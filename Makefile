@@ -14,6 +14,15 @@ repos.sqlite: repos.sql Makefile
 	rm -f repos.sqlite
 	sqlite3 repos.sqlite <repos.sql
 
+graph/repos.svg: repos.dat Makefile
+	./plot-graph --svg repos.dat
+
+graph/relative.svg: relative.dat Makefile
+	./plot-graph --svg relative.dat
+
+graph/relative-zoom.svg: relative.dat Makefile
+	./plot-graph --svg --zoom relative.dat
+
 .PHONY: bezier
 bezier: relative.dat
 	./plot-graph --bezier repos.dat
@@ -48,10 +57,7 @@ sort:
 	mv dups.dat.tmp dups.dat
 
 .PHONY: svg
-svg: relative.dat
-	./plot-graph --svg repos.dat
-	./plot-graph --svg --zoom relative.dat
-	./plot-graph --svg relative.dat
+svg: graph/repos.svg graph/relative.svg graph/relative-zoom.svg
 
 .PHONY: update
 update:
