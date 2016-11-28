@@ -23,7 +23,7 @@ version control systems. Generated SVG graphs are stored in `graph/`:
   Graph of total number of repositories.
 
 A status report generated from the newest data is stored in 
-[`status.txt`](status.txt).
+[**`status.txt`**](status.txt).
 
 Usage
 -----
