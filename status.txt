@@ -11,19 +11,19 @@ bazaar       13096    (1.87%)
 ----------  ------  ---------
 Total       700881  (100.00%)
 
-New repositories since 2014-08-05 01:41:02 UTC:
+New repositories since 2012-10-04 09:34:45 UTC:
 
-git          29094   (92.91%)
-subversion    1492    (4.76%)
-mercurial      491    (1.57%)
-bazaar         163    (0.52%)
-cvs             74    (0.24%)
+git         140523   (67.98%)
+subversion   58245   (28.17%)
+mercurial     6757    (3.27%)
+bazaar         908    (0.44%)
+cvs            294    (0.14%)
 ----------  ------  ---------
-Total        31314  (100.00%)
+Total       206727  (100.00%)
 
 New repositories per week:
 
     bazaar         cvs         git   mercurial  subversion
 ----------  ----------  ----------  ----------  ----------
-      1.35        0.61      240.74        4.06       12.35
+      4.19        1.36      649.01       31.21      269.01
 
