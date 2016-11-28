@@ -22,6 +22,9 @@ version control systems. Generated SVG graphs are stored in `graph/`:
 - [**`repos.svg`**](graph/repos.svg)<br />
   Graph of total number of repositories.
 
+A status report generated from the newest data is stored in 
+[`status.txt`](status.txt).
+
 Usage
 -----
 
@@ -35,7 +38,7 @@ Usage
   Generate Gnuplot graphs.
 - **`make bezier`**<br />
   Same as `make plot`, but use Bézier smoothing.
-- **`make report`**<br />
+- **`make status`**<br />
   Create some tables with statistics.
 - **`make repos.sqlite`**<br />
   Create the SQLite database.

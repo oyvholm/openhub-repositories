@@ -2,7 +2,7 @@
 # File ID: 3eaf2bda-20dd-11e4-a0e2-c80aa9e67bbd
 
 .PHONY: default
-default: report plot
+default: status plot
 
 relative.dat: repos.dat repos.sqlite Makefile
 	./convert-to-relative repos.dat >relative.dat
@@ -48,8 +48,8 @@ plot: relative.dat
 	./plot-graph --zoom relative.dat
 	./plot-graph relative.dat
 
-.PHONY: report
-report: repos.sqlite status.txt
+.PHONY: status
+status: repos.sqlite status.txt
 	cat status.txt
 
 .PHONY: sort
