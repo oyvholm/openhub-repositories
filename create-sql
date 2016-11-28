@@ -6,8 +6,8 @@
 #
 # Convert repos.dat to SQL
 #
-# ©opyleft 2016– Øyvind A. Holm <sunny@sunbase.org>
-# License: GNU General Public License version 2 or later
+# Author: Øyvind A. Holm <sunny@sunbase.org>
+# License: GNU General Public License version 2 or later.
 #==============================================================================
 
 use strict;

@@ -1,14 +1,14 @@
 #!/usr/bin/env perl
 
-#=======================================================================
+#==============================================================================
 # convert-to-relative
 # File ID: 55d642ae-20dc-11e4-ad57-c80aa9e67bbd
+#
 # Convert repos.dat to a data set where every graph starts at zero.
 #
-# Character set: UTF-8
-# ©opyleft 2014– Øyvind A. Holm <sunny@sunbase.org>
-# License: GNU General Public License version 2 or later
-#=======================================================================
+# Author: Øyvind A. Holm <sunny@sunbase.org>
+# License: GNU General Public License version 2 or later.
+#==============================================================================
 
 use strict;
 use warnings;
