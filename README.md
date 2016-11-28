@@ -60,7 +60,7 @@ These programs are necessary to run the various `make` commands or
 - sqlite3
 - gnuplot
 - Python v3
-- bash or any other Bourne-compatible shell
+- /bin/sh, found on most \*nix variants
 - Perl
 
 Download
