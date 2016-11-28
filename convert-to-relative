@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 #=======================================================================
 # convert-to-relative
@@ -14,7 +14,7 @@ use strict;
 use warnings;
 
 my $progname = "convert-to-relative";
-my $VERSION = "0.1.0";
+my $VERSION = "0.1.1";
 
 exit(main());
 
