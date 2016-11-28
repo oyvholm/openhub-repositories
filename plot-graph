@@ -1,9 +1,17 @@
-#!/bin/bash
+#!/bin/sh
 
+#==============================================================================
+# plot-graph
 # File ID: ccf32478-1c7d-11e4-af72-000df06acc56
+#
+# Generate Gnuplopt graphs of the Open Hub data.
+#
+# Author: Øyvind A. Holm <sunny@sunbase.org>
+# License: GNU General Public License version 2 or later.
+#==============================================================================
 
 progname=plot-graph
-VERSION=0.2.0
+VERSION=0.3.0
 
 test "$1" = "--bezier" && { use_bezier=1; shift; } || unset use_bezier
 test "$1" = "--svg" && { use_svg=1; shift; } || unset use_svg
@@ -12,31 +20,36 @@ file="$1"
 filebase="$(basename "$1" .dat)"
 
 graph() {
-    local column=$1
-    local lt=$2
-    local title=$3
-    printf '"%s" using 1:%u title "%s" ' "$file" "$column" "$title"
-    test -n "$use_bezier" && echo w l s b lt rgb \"$lt\" ||
-        echo w lp pt 1 lt rgb \"$lt\"
+	local column=$1
+	local lt=$2
+	local title=$3
+	printf '"%s" using 1:%u title "%s" ' "$file" "$column" "$title"
+	test -n "$use_bezier" && echo w l s b lt rgb \"$lt\" ||
+		echo w lp pt 1 lt rgb \"$lt\"
 }
 
 set_svg() {
-    if test "$use_svg" = "1"; then
-        test "$use_zoom" = "1" && { svg_str="-zoom"; } || unset svg_str
-        echo set terminal svg size 1920,1080
-        echo set output \"graph/$filebase$svg_str.svg\"
-        echo set object 1 rect from screen 0, 0, 0 to screen 1, 1, 0 behind
-        echo set object 1 rect fc rgb \"white\" fillstyle solid 1.0
-    fi
+	if test "$use_svg" = "1"; then
+		test "$use_zoom" = "1" && { svg_str="-zoom"; } || unset svg_str
+		echo set terminal svg size 1920,1080
+		echo set output \"graph/$filebase$svg_str.svg\"
+		echo set object 1 rect from screen 0, 0, 0 to screen 1, 1, 0 behind
+		echo set object 1 rect fc rgb \"white\" fillstyle solid 1.0
+	fi
 }
 
 set_yrange() {
-    if test "$use_zoom" = "1"; then
-        maxcount=$(cut -f 2,3,5,6 -d ' ' "$file" | fmt -1 | sort -n | tail -1)
-        echo "set yrange [0.1:$maxcount]"
-    else
-        echo "set yrange [0.1:]"
-    fi
+	if test "$use_zoom" = "1"; then
+		maxcount=$(
+		    cut -f 2,3,5,6 -d ' ' "$file" |
+		    fmt -1 |
+		    sort -n |
+		    tail -1
+		)
+		echo "set yrange [0.1:$maxcount]"
+	else
+		echo "set yrange [0.1:]"
+	fi
 }
 
 cat <<END | gnuplot -persist
@@ -53,3 +66,5 @@ $(graph 4 green Git), \\
 $(graph 5 cyan Mercurial), \\
 $(graph 6 magenta Subversion)
 END
+
+# vim: set ts=8 sw=8 sts=8 noet fo+=w tw=79 fenc=UTF-8 :
