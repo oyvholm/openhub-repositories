@@ -14,6 +14,9 @@ repos.sqlite: repos.sql Makefile
 	rm -f repos.sqlite
 	sqlite3 repos.sqlite <repos.sql
 
+status.txt: repos.sqlite
+	./textreport >status.txt
+
 graph/repos.svg: repos.dat Makefile
 	./plot-graph --svg repos.dat
 
@@ -46,8 +49,8 @@ plot: relative.dat
 	./plot-graph relative.dat
 
 .PHONY: report
-report: repos.sqlite
-	./textreport
+report: repos.sqlite status.txt
+	cat status.txt
 
 .PHONY: sort
 sort:
