@@ -17,8 +17,8 @@ repos.sqlite: repos.sql Makefile
 .PHONY: bezier
 bezier: relative.dat
 	./plot-graph --bezier repos.dat
-	./plot-graph --bezier relative.dat
 	./plot-graph --bezier --zoom relative.dat
+	./plot-graph --bezier relative.dat
 
 .PHONY: clean
 clean:
@@ -33,8 +33,8 @@ dups:
 .PHONY: plot
 plot: relative.dat
 	./plot-graph repos.dat
-	./plot-graph relative.dat
 	./plot-graph --zoom relative.dat
+	./plot-graph relative.dat
 
 .PHONY: report
 report: repos.sqlite
@@ -50,8 +50,8 @@ sort:
 .PHONY: svg
 svg: relative.dat
 	./plot-graph --svg repos.dat
-	./plot-graph --svg relative.dat
 	./plot-graph --svg --zoom relative.dat
+	./plot-graph --svg relative.dat
 
 .PHONY: update
 update:
