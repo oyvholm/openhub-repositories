@@ -4,7 +4,7 @@
 .PHONY: default
 default: report plot
 
-relative.dat: repos.dat Makefile
+relative.dat: repos.dat repos.sqlite Makefile
 	./convert-to-relative repos.dat >relative.dat
 
 repos.sql: repos.dat Makefile

@@ -14,28 +14,35 @@ use strict;
 use warnings;
 
 my $progname = "convert-to-relative";
-my $VERSION = "0.1.1";
+my $VERSION = "0.2.0";
 
 exit(main());
 
 sub main {
 	my $Retval = 0;
+	my %init = ();
+
+	for my $f (qw{ bazaar cvs git mercurial subversion }) {
+		$init{$f} = `sqlite3 repos.sqlite "
+		  SELECT $f FROM repos ORDER BY date LIMIT 1;"`;
+	}
+
 	while (<>) {
 		if (/^(20.*?)\s(\d+)\s(\d+)\s(\d+)\s(\d+)\s(\d+)/) {
-			# FIXME: Quick and dirty hardcoding
 			printf("%s %u %u %u %u %u\n",
 			       $1,
-			       $2 - 12933,
-			       $3 - 62746,
-			       $4 - 250917,
-			       $5 - 17835,
-			       $6 - 325136,
+			       $2 - $init{bazaar},
+			       $3 - $init{cvs},
+			       $4 - $init{git},
+			       $5 - $init{mercurial},
+			       $6 - $init{subversion},
 			);
 		} else {
 			print;
 		}
 	}
-	return($Retval);
+
+	return $Retval;
 } # main()
 
 # vim: set ts=8 sw=8 sts=8 noet fo+=w tw=79 fenc=UTF-8 :
