@@ -11,7 +11,7 @@
 #==============================================================================
 
 progname=textreport
-VERSION=0.3.0
+VERSION=0.3.1
 
 db=repos.sqlite
 
@@ -123,8 +123,8 @@ echo
 
 echo New repositories per week:
 echo
-gensel "round(($(latest §) - $(first §)) /
-        (julianday($(latest date)) - julianday($(first date))) * 7, 2)"
+gensel "printf('%.02f', round(($(latest §) - $(first §)) /
+        (julianday($(latest date)) - julianday($(first date))) * 7, 2))"
 echo
 
 # vim: set ts=8 sw=8 sts=8 noet fo+=w tw=79 fenc=UTF-8 :
