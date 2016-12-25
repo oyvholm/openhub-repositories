@@ -42,6 +42,13 @@ dups:
 	$(MAKE) sort
 	git checkout -f repos.dat
 
+.PHONY: merge-master
+merge-master:
+	git merge master || true
+	rm status.txt graph/*
+	$(MAKE) clean status svg
+	git add -u
+
 .PHONY: plot
 plot: relative.dat
 	./plot-graph repos.dat
