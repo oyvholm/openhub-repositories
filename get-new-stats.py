@@ -13,12 +13,12 @@ import json
 import time
 
 progname = 'get-new-stats.py'
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 def get_http(url):
     import urllib.request
     response = urllib.request.urlopen(url)
-    str_response = response.readall().decode('utf-8')
+    str_response = response.read().decode('utf-8')
     return str_response
 
 if __name__ == "__main__":
