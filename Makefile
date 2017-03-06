@@ -2,7 +2,7 @@
 # File ID: 3eaf2bda-20dd-11e4-a0e2-c80aa9e67bbd
 
 .PHONY: default
-default: status plot
+default: status
 
 relative.dat: repos.dat repos.sqlite Makefile
 	./convert-to-relative repos.dat >relative.dat
@@ -28,8 +28,6 @@ graph/relative-zoom.svg: relative.dat Makefile
 
 .PHONY: bezier
 bezier: relative.dat
-	./plot-graph --bezier repos.dat
-	./plot-graph --bezier --zoom relative.dat
 	./plot-graph --bezier relative.dat
 
 .PHONY: clean
@@ -51,12 +49,10 @@ merge-master:
 
 .PHONY: plot
 plot: relative.dat
-	./plot-graph repos.dat
-	./plot-graph --zoom relative.dat
 	./plot-graph relative.dat
 
 .PHONY: status
-status: repos.sqlite status.txt
+status: status.txt
 	cat status.txt
 
 .PHONY: sort

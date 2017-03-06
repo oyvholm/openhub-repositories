@@ -11,7 +11,7 @@
 #==============================================================================
 
 progname=plot-graph
-VERSION=0.3.0
+VERSION=0.4.0
 
 test "$1" = "--bezier" && { use_bezier=1; shift; } || unset use_bezier
 test "$1" = "--svg" && { use_svg=1; shift; } || unset use_svg
@@ -52,7 +52,8 @@ set_yrange() {
 	fi
 }
 
-cat <<END | gnuplot -persist
+tmpfile=$(date +%s).$$.tmp
+cat <<END >$tmpfile
 $(set_svg)
 set xdata time
 set grid
@@ -66,5 +67,12 @@ $(graph 4 green Git), \\
 $(graph 5 cyan Mercurial), \\
 $(graph 6 magenta Subversion)
 END
+
+if test "$use_svg" != "1"; then
+	echo "pause -1 \"$progname: Press Enter...\"" >>$tmpfile
+fi
+
+gnuplot -persist $tmpfile
+rm -f $tmpfile
 
 # vim: set ts=8 sw=8 sts=8 noet fo+=w tw=79 fenc=UTF-8 :

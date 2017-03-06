@@ -31,10 +31,9 @@ Usage
 - **`make update`**<br />
   Update `repos.dat` with new data from `openhub.net`.
 - **`make`**<br />
-  Create `repos.sql` and `repos.sqlite`, tables with stats and plots 
-  with Gnuplot for local viewing.
+  Create `repos.sql` and `repos.sqlite`, update and view status.txt.
 - **`make plot`**<br />
-  Generate Gnuplot graphs.
+  Generate Gnuplot graph.
 - **`make bezier`**<br />
   Same as `make plot`, but use Bézier smoothing.
 - **`make status`**<br />
