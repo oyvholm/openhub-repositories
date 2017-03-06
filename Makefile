@@ -45,7 +45,7 @@ plot: relative.dat
 	./plot-graph relative.dat
 
 .PHONY: status
-status: repos.sqlite status.txt
+status: status.txt
 	cat status.txt
 
 .PHONY: sort
