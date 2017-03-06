@@ -34,7 +34,7 @@ Usage
   Create `repos.sql` and `repos.sqlite`, tables with stats and plots 
   with Gnuplot for local viewing.
 - **`make plot`**<br />
-  Generate Gnuplot graphs.
+  Generate Gnuplot graph.
 - **`make bezier`**<br />
   Same as `make plot`, but use Bézier smoothing.
 - **`make status`**<br />

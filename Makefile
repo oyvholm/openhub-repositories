@@ -44,8 +44,6 @@ dups:
 
 .PHONY: plot
 plot: relative.dat
-	./plot-graph repos.dat
-	./plot-graph --zoom relative.dat
 	./plot-graph relative.dat
 
 .PHONY: status
