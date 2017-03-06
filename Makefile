@@ -28,8 +28,6 @@ graph/relative-zoom.svg: relative.dat Makefile
 
 .PHONY: bezier
 bezier: relative.dat
-	./plot-graph --bezier repos.dat
-	./plot-graph --bezier --zoom relative.dat
 	./plot-graph --bezier relative.dat
 
 .PHONY: clean
