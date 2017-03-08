@@ -11,7 +11,7 @@
 #==============================================================================
 
 progname=plot-graph
-VERSION=0.4.0
+VERSION=0.5.0
 
 test "$1" = "--bezier" && { use_bezier=1; shift; } || unset use_bezier
 test "$1" = "--svg" && { use_svg=1; shift; } || unset use_svg
@@ -24,18 +24,23 @@ graph() {
 	local lt=$2
 	local title=$3
 	printf '"%s" using 1:%u title "%s" ' "$file" "$column" "$title"
-	test -n "$use_bezier" && echo w l s b lt rgb \"$lt\" ||
-		echo w lp pt 1 lt rgb \"$lt\"
+	if test -z "$use_bezier"; then
+		echo -n w lp pt 1 lt rgb \"$lt\"
+		printf ', "%s" using 1:%u notitle ' \
+		       "$file" "$column"
+		echo w l s b dt 2 lt rgb \"$lt\"
+	else
+		echo -n w l s b lt rgb \"$lt\"
+	fi
 }
 
 set_svg() {
-	if test "$use_svg" = "1"; then
-		test "$use_zoom" = "1" && { svg_str="-zoom"; } || unset svg_str
-		echo set terminal svg size 1920,1080
-		echo set output \"graph/$filebase$svg_str.svg\"
-		echo set object 1 rect from screen 0, 0, 0 to screen 1, 1, 0 behind
-		echo set object 1 rect fc rgb \"white\" fillstyle solid 1.0
-	fi
+	test "$use_svg" != "1" && return
+	test "$use_zoom" = "1" && { svg_str="-zoom"; } || unset svg_str
+	echo set terminal svg size 1920,1080
+	echo set output \"graph/$filebase$svg_str.svg\"
+	echo set object 1 rect from screen 0, 0, 0 to screen 1, 1, 0 behind
+	echo set object 1 rect fc rgb \"white\" fillstyle solid 1.0
 }
 
 set_yrange() {

@@ -356,7 +356,7 @@
 		L1707.3,1038.2 L1710.1,1038.2 L1712.8,1038.2 L1716.8,1038.2 L1719.6,1038.2 L1721.1,1038.2 L1723.6,1038.2 L1728.6,1038.2
 		L1739.6,1038.2 L1748.5,1038.2 L1757.2,1038.2 L1759.5,1038.2 L1760.6,1038.1 L1761.9,1038.1 L1764.4,1038.1 L1766.1,1038.1
 		L1767.6,1038.1 L1769.5,1038.1 L1770.4,1038.1 L1771.3,1038.1 L1772.3,1038.1 L1773.6,1038.1 L1775.0,1038.1 L1776.2,1038.1
-		L1777.1,1038.1 L1778.3,1038.1  '/>	<use xlink:href='#gpPt0' transform='translate(281.2,1043.2) scale(4.50)' color='rgb(255,   0,   0)'/>
+		L1777.1,1038.1 L1778.3,1038.1 L1778.7,1038.1 L1779.7,1038.1  '/>	<use xlink:href='#gpPt0' transform='translate(281.2,1043.2) scale(4.50)' color='rgb(255,   0,   0)'/>
 	<use xlink:href='#gpPt0' transform='translate(391.7,1041.9) scale(4.50)' color='rgb(255,   0,   0)'/>
 	<use xlink:href='#gpPt0' transform='translate(615.3,1040.0) scale(4.50)' color='rgb(255,   0,   0)'/>
 	<use xlink:href='#gpPt0' transform='translate(688.1,1039.7) scale(4.50)' color='rgb(255,   0,   0)'/>
@@ -479,10 +479,28 @@
 	<use xlink:href='#gpPt0' transform='translate(1776.2,1038.1) scale(4.50)' color='rgb(255,   0,   0)'/>
 	<use xlink:href='#gpPt0' transform='translate(1777.1,1038.1) scale(4.50)' color='rgb(255,   0,   0)'/>
 	<use xlink:href='#gpPt0' transform='translate(1778.3,1038.1) scale(4.50)' color='rgb(255,   0,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(1778.7,1038.1) scale(4.50)' color='rgb(255,   0,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(1779.7,1038.1) scale(4.50)' color='rgb(255,   0,   0)'/>
 	<use xlink:href='#gpPt0' transform='translate(1857.3,34.7) scale(4.50)' color='rgb(255,   0,   0)'/>
 </g>
 	</g>
-	<g id="gnuplot_plot_2" ><title>CVS</title>
+	<g id="gnuplot_plot_2" ><title>gnuplot_plot_2</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(255,   0,   0)' stroke-dasharray='2.5,4.0'  d='M173.6,1044.0 L324.8,1042.7 L490.8,1041.3 L629.9,1040.4 L725.9,1039.8 L783.1,1039.5 L813.7,1039.3 L828.8,1039.3
+		L835.9,1039.2 L839.4,1039.2 L841.3,1039.2 L842.7,1039.2 L843.9,1039.2 L845.4,1039.2 L847.3,1039.2 L850.2,1039.1
+		L854.5,1039.1 L860.6,1039.1 L868.9,1039.1 L879.5,1039.1 L892.5,1039.1 L907.7,1039.0 L924.9,1039.0 L943.8,1039.0
+		L964.1,1038.9 L985.3,1038.9 L1007.3,1038.9 L1029.6,1038.8 L1052.1,1038.8 L1074.5,1038.8 L1096.7,1038.7 L1118.5,1038.7
+		L1139.5,1038.7 L1159.7,1038.7 L1178.9,1038.6 L1196.8,1038.6 L1213.6,1038.6 L1229.3,1038.6 L1244.0,1038.6 L1257.8,1038.6
+		L1271.1,1038.6 L1284.0,1038.6 L1296.9,1038.6 L1309.9,1038.6 L1323.4,1038.6 L1337.7,1038.6 L1352.8,1038.5 L1368.9,1038.5
+		L1386.2,1038.5 L1404.5,1038.5 L1423.9,1038.5 L1443.9,1038.4 L1464.5,1038.4 L1485.2,1038.4 L1505.7,1038.3 L1525.6,1038.3
+		L1544.6,1038.3 L1562.3,1038.2 L1578.7,1038.2 L1593.6,1038.2 L1606.8,1038.2 L1618.5,1038.2 L1628.7,1038.2 L1637.5,1038.2
+		L1645.2,1038.2 L1651.8,1038.2 L1657.6,1038.2 L1662.8,1038.2 L1667.6,1038.2 L1672.1,1038.2 L1676.5,1038.2 L1680.7,1038.2
+		L1684.8,1038.2 L1688.8,1038.2 L1692.9,1038.2 L1696.9,1038.2 L1700.9,1038.2 L1705.0,1038.2 L1709.2,1038.2 L1713.6,1038.2
+		L1718.3,1038.2 L1723.2,1038.2 L1728.5,1038.2 L1734.1,1038.2 L1739.9,1038.2 L1745.6,1038.2 L1751.1,1038.2 L1755.9,1038.2
+		L1760.0,1038.1 L1763.4,1038.1 L1766.1,1038.1 L1768.3,1038.1 L1770.1,1038.1 L1771.8,1038.1 L1773.3,1038.1 L1774.8,1038.1
+		L1776.2,1038.1 L1777.5,1038.1 L1778.6,1038.1 L1779.7,1038.1  '/></g>
+	</g>
+	<g id="gnuplot_plot_3" ><title>CVS</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(1827.9,57.2)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >CVS</tspan></text>
@@ -504,7 +522,7 @@
 		L1707.3,1042.1 L1710.1,1042.1 L1712.8,1042.1 L1716.8,1042.1 L1719.6,1042.1 L1721.1,1042.1 L1723.6,1042.1 L1728.6,1042.1
 		L1739.6,1042.1 L1748.5,1042.1 L1757.2,1042.1 L1759.5,1042.1 L1760.6,1042.1 L1761.9,1042.1 L1764.4,1042.1 L1766.1,1042.1
 		L1767.6,1042.1 L1769.5,1042.1 L1770.4,1042.1 L1771.3,1042.1 L1772.3,1042.1 L1773.6,1042.1 L1775.0,1042.1 L1776.2,1042.1
-		L1777.1,1042.1 L1778.3,1042.1  '/>	<use xlink:href='#gpPt0' transform='translate(281.2,1043.7) scale(4.50)' color='rgb(  0,   0, 255)'/>
+		L1777.1,1042.1 L1778.3,1042.1 L1778.7,1042.1 L1779.7,1042.1  '/>	<use xlink:href='#gpPt0' transform='translate(281.2,1043.7) scale(4.50)' color='rgb(  0,   0, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(391.7,1043.5) scale(4.50)' color='rgb(  0,   0, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(615.3,1043.2) scale(4.50)' color='rgb(  0,   0, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(688.1,1043.0) scale(4.50)' color='rgb(  0,   0, 255)'/>
@@ -627,10 +645,28 @@
 	<use xlink:href='#gpPt0' transform='translate(1776.2,1042.1) scale(4.50)' color='rgb(  0,   0, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(1777.1,1042.1) scale(4.50)' color='rgb(  0,   0, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(1778.3,1042.1) scale(4.50)' color='rgb(  0,   0, 255)'/>
+	<use xlink:href='#gpPt0' transform='translate(1778.7,1042.1) scale(4.50)' color='rgb(  0,   0, 255)'/>
+	<use xlink:href='#gpPt0' transform='translate(1779.7,1042.1) scale(4.50)' color='rgb(  0,   0, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(1857.3,52.7) scale(4.50)' color='rgb(  0,   0, 255)'/>
 </g>
 	</g>
-	<g id="gnuplot_plot_3" ><title>Git</title>
+	<g id="gnuplot_plot_4" ><title>gnuplot_plot_4</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(  0,   0, 255)' stroke-dasharray='2.5,4.0'  d='M173.8,1044.0 L324.8,1043.6 L490.8,1043.3 L629.9,1043.1 L725.9,1042.9 L783.1,1042.7 L813.7,1042.7 L828.8,1042.6
+		L835.9,1042.6 L839.4,1042.6 L841.3,1042.6 L842.7,1042.6 L843.9,1042.6 L845.4,1042.6 L847.3,1042.6 L850.2,1042.6
+		L854.5,1042.6 L860.6,1042.6 L868.9,1042.6 L879.5,1042.6 L892.5,1042.6 L907.7,1042.6 L924.9,1042.5 L943.8,1042.5
+		L964.1,1042.5 L985.3,1042.4 L1007.3,1042.4 L1029.6,1042.4 L1052.1,1042.3 L1074.5,1042.3 L1096.7,1042.3 L1118.5,1042.2
+		L1139.5,1042.2 L1159.7,1042.2 L1178.9,1042.2 L1196.8,1042.2 L1213.6,1042.2 L1229.3,1042.2 L1244.0,1042.2 L1257.8,1042.2
+		L1271.1,1042.2 L1284.0,1042.2 L1296.9,1042.2 L1309.9,1042.2 L1323.4,1042.2 L1337.7,1042.2 L1352.8,1042.2 L1368.9,1042.2
+		L1386.2,1042.2 L1404.5,1042.1 L1423.9,1042.1 L1443.9,1042.1 L1464.5,1042.1 L1485.2,1042.1 L1505.7,1042.1 L1525.6,1042.1
+		L1544.6,1042.1 L1562.3,1042.1 L1578.7,1042.1 L1593.6,1042.1 L1606.8,1042.1 L1618.5,1042.1 L1628.7,1042.1 L1637.5,1042.1
+		L1645.2,1042.1 L1651.8,1042.1 L1657.6,1042.1 L1662.8,1042.1 L1667.6,1042.1 L1672.1,1042.1 L1676.5,1042.1 L1680.7,1042.1
+		L1684.8,1042.1 L1688.8,1042.1 L1692.9,1042.1 L1696.9,1042.1 L1700.9,1042.1 L1705.0,1042.1 L1709.2,1042.1 L1713.6,1042.1
+		L1718.3,1042.1 L1723.2,1042.1 L1728.5,1042.1 L1734.1,1042.1 L1739.9,1042.1 L1745.6,1042.1 L1751.1,1042.1 L1755.9,1042.1
+		L1760.0,1042.1 L1763.4,1042.1 L1766.1,1042.1 L1768.3,1042.1 L1770.1,1042.1 L1771.8,1042.1 L1773.3,1042.1 L1774.8,1042.1
+		L1776.2,1042.1 L1777.5,1042.1 L1778.6,1042.1 L1779.7,1042.1  '/></g>
+	</g>
+	<g id="gnuplot_plot_5" ><title>Git</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(1827.9,75.2)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >Git</tspan></text>
@@ -652,7 +688,7 @@
 		L1704.4,136.2 L1707.3,135.6 L1710.1,135.4 L1712.8,134.8 L1716.8,133.8 L1719.6,132.6 L1721.1,132.0 L1723.6,130.5
 		L1728.6,128.4 L1739.6,122.1 L1748.5,119.6 L1757.2,118.8 L1759.5,118.5 L1760.6,115.8 L1761.9,109.3 L1764.4,108.6
 		L1766.1,108.4 L1767.6,96.7 L1769.5,85.6 L1770.4,80.6 L1771.3,75.6 L1772.3,71.5 L1773.6,65.5 L1775.0,70.2
-		L1776.2,57.1 L1777.1,52.6 L1778.3,47.8  '/>	<use xlink:href='#gpPt0' transform='translate(281.2,942.5) scale(4.50)' color='rgb(  0, 255,   0)'/>
+		L1776.2,57.1 L1777.1,52.6 L1778.3,47.8 L1778.7,47.8 L1779.7,47.7  '/>	<use xlink:href='#gpPt0' transform='translate(281.2,942.5) scale(4.50)' color='rgb(  0, 255,   0)'/>
 	<use xlink:href='#gpPt0' transform='translate(391.7,916.7) scale(4.50)' color='rgb(  0, 255,   0)'/>
 	<use xlink:href='#gpPt0' transform='translate(615.3,388.1) scale(4.50)' color='rgb(  0, 255,   0)'/>
 	<use xlink:href='#gpPt0' transform='translate(688.1,368.3) scale(4.50)' color='rgb(  0, 255,   0)'/>
@@ -775,10 +811,28 @@
 	<use xlink:href='#gpPt0' transform='translate(1776.2,57.1) scale(4.50)' color='rgb(  0, 255,   0)'/>
 	<use xlink:href='#gpPt0' transform='translate(1777.1,52.6) scale(4.50)' color='rgb(  0, 255,   0)'/>
 	<use xlink:href='#gpPt0' transform='translate(1778.3,47.8) scale(4.50)' color='rgb(  0, 255,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(1778.7,47.8) scale(4.50)' color='rgb(  0, 255,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(1779.7,47.7) scale(4.50)' color='rgb(  0, 255,   0)'/>
 	<use xlink:href='#gpPt0' transform='translate(1857.3,70.7) scale(4.50)' color='rgb(  0, 255,   0)'/>
 </g>
 	</g>
-	<g id="gnuplot_plot_4" ><title>Mercurial</title>
+	<g id="gnuplot_plot_6" ><title>gnuplot_plot_6</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(  0, 255,   0)' stroke-dasharray='2.5,4.0'  d='M173.5,1044.0 L324.8,890.0 L490.8,677.3 L629.9,510.3 L725.9,413.0 L783.1,364.8 L813.7,343.1 L828.8,334.0
+		L835.9,330.2 L839.4,328.7 L841.3,328.0 L842.7,327.5 L843.9,327.2 L845.4,326.7 L847.3,326.2 L850.2,325.3
+		L854.5,324.1 L860.6,322.4 L868.9,320.2 L879.5,317.4 L892.5,314.3 L907.7,310.7 L924.9,306.8 L943.8,302.7
+		L964.1,298.5 L985.3,294.3 L1007.3,290.0 L1029.6,285.9 L1052.1,281.9 L1074.5,278.1 L1096.7,274.5 L1118.5,271.1
+		L1139.5,267.9 L1159.7,265.0 L1178.9,262.4 L1196.8,260.0 L1213.6,257.8 L1229.3,255.8 L1244.0,253.9 L1257.8,252.1
+		L1271.1,250.3 L1284.0,248.5 L1296.9,246.7 L1309.9,244.6 L1323.4,242.4 L1337.7,239.7 L1352.8,236.7 L1368.9,233.2
+		L1386.2,229.1 L1404.5,224.3 L1423.9,219.0 L1443.9,213.2 L1464.5,207.0 L1485.2,200.5 L1505.7,193.9 L1525.6,187.5
+		L1544.6,181.3 L1562.3,175.5 L1578.7,170.2 L1593.6,165.5 L1606.8,161.4 L1618.5,157.9 L1628.7,154.9 L1637.5,152.4
+		L1645.2,150.3 L1651.8,148.5 L1657.6,147.0 L1662.8,145.7 L1667.6,144.5 L1672.1,143.5 L1676.5,142.5 L1680.7,141.5
+		L1684.8,140.6 L1688.8,139.7 L1692.9,138.8 L1696.9,137.9 L1700.9,136.9 L1705.0,135.9 L1709.2,134.7 L1713.6,133.4
+		L1718.3,131.9 L1723.2,130.1 L1728.5,128.0 L1734.1,125.6 L1739.9,122.9 L1745.6,119.8 L1751.1,116.2 L1755.9,112.2
+		L1760.0,107.6 L1763.4,102.2 L1766.1,96.1 L1768.3,89.5 L1770.1,82.6 L1771.8,75.9 L1773.3,69.7 L1774.8,63.8
+		L1776.2,57.9 L1777.5,52.5 L1778.6,48.7 L1779.7,47.7  '/></g>
+	</g>
+	<g id="gnuplot_plot_7" ><title>Mercurial</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(1827.9,93.2)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >Mercurial</tspan></text>
@@ -800,7 +854,7 @@
 		L1704.4,1000.6 L1707.3,1000.6 L1710.1,1000.6 L1712.8,1000.5 L1716.8,1000.5 L1719.6,1000.5 L1721.1,1000.4 L1723.6,1000.4
 		L1728.6,1000.4 L1739.6,1000.3 L1748.5,1000.3 L1757.2,1000.2 L1759.5,1000.2 L1760.6,1000.2 L1761.9,1000.2 L1764.4,1000.2
 		L1766.1,1000.2 L1767.6,1000.2 L1769.5,1000.2 L1770.4,1000.2 L1771.3,1000.2 L1772.3,1000.2 L1773.6,1000.2 L1775.0,1000.2
-		L1776.2,1000.2 L1777.1,1000.2 L1778.3,1000.2  '/>	<use xlink:href='#gpPt0' transform='translate(281.2,1013.5) scale(4.50)' color='rgb(  0, 255, 255)'/>
+		L1776.2,1000.2 L1777.1,1000.2 L1778.3,1000.2 L1778.7,1000.2 L1779.7,1000.2  '/>	<use xlink:href='#gpPt0' transform='translate(281.2,1013.5) scale(4.50)' color='rgb(  0, 255, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(391.7,1011.6) scale(4.50)' color='rgb(  0, 255, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(615.3,1007.0) scale(4.50)' color='rgb(  0, 255, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(688.1,1006.0) scale(4.50)' color='rgb(  0, 255, 255)'/>
@@ -923,10 +977,28 @@
 	<use xlink:href='#gpPt0' transform='translate(1776.2,1000.2) scale(4.50)' color='rgb(  0, 255, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(1777.1,1000.2) scale(4.50)' color='rgb(  0, 255, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(1778.3,1000.2) scale(4.50)' color='rgb(  0, 255, 255)'/>
+	<use xlink:href='#gpPt0' transform='translate(1778.7,1000.2) scale(4.50)' color='rgb(  0, 255, 255)'/>
+	<use xlink:href='#gpPt0' transform='translate(1779.7,1000.2) scale(4.50)' color='rgb(  0, 255, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(1857.3,88.7) scale(4.50)' color='rgb(  0, 255, 255)'/>
 </g>
 	</g>
-	<g id="gnuplot_plot_5" ><title>Subversion</title>
+	<g id="gnuplot_plot_8" ><title>gnuplot_plot_8</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(  0, 255, 255)' stroke-dasharray='2.5,4.0'  d='M173.5,1044.0 L324.8,1020.7 L490.8,1011.9 L629.9,1007.8 L725.9,1005.7 L783.1,1004.7 L813.7,1004.2 L828.8,1003.9
+		L835.9,1003.8 L839.4,1003.7 L841.3,1003.7 L842.7,1003.7 L843.9,1003.7 L845.4,1003.7 L847.3,1003.7 L850.2,1003.7
+		L854.5,1003.6 L860.6,1003.6 L868.9,1003.6 L879.5,1003.5 L892.5,1003.4 L907.7,1003.3 L924.9,1003.2 L943.8,1003.1
+		L964.1,1003.0 L985.3,1002.9 L1007.3,1002.8 L1029.6,1002.7 L1052.1,1002.5 L1074.5,1002.4 L1096.7,1002.3 L1118.5,1002.2
+		L1139.5,1002.2 L1159.7,1002.1 L1178.9,1002.0 L1196.8,1001.9 L1213.6,1001.9 L1229.3,1001.8 L1244.0,1001.8 L1257.8,1001.7
+		L1271.1,1001.7 L1284.0,1001.7 L1296.9,1001.6 L1309.9,1001.6 L1323.4,1001.5 L1337.7,1001.5 L1352.8,1001.4 L1368.9,1001.4
+		L1386.2,1001.3 L1404.5,1001.3 L1423.9,1001.2 L1443.9,1001.2 L1464.5,1001.1 L1485.2,1001.1 L1505.7,1001.0 L1525.6,1000.9
+		L1544.6,1000.9 L1562.3,1000.8 L1578.7,1000.8 L1593.6,1000.8 L1606.8,1000.7 L1618.5,1000.7 L1628.7,1000.7 L1637.5,1000.7
+		L1645.2,1000.7 L1651.8,1000.7 L1657.6,1000.6 L1662.8,1000.6 L1667.6,1000.6 L1672.1,1000.6 L1676.5,1000.6 L1680.7,1000.6
+		L1684.8,1000.6 L1688.8,1000.6 L1692.9,1000.6 L1696.9,1000.6 L1700.9,1000.6 L1705.0,1000.5 L1709.2,1000.5 L1713.6,1000.5
+		L1718.3,1000.5 L1723.2,1000.4 L1728.5,1000.4 L1734.1,1000.4 L1739.9,1000.3 L1745.6,1000.3 L1751.1,1000.3 L1755.9,1000.3
+		L1760.0,1000.2 L1763.4,1000.2 L1766.1,1000.2 L1768.3,1000.2 L1770.1,1000.2 L1771.8,1000.2 L1773.3,1000.2 L1774.8,1000.2
+		L1776.2,1000.2 L1777.5,1000.2 L1778.6,1000.2 L1779.7,1000.2  '/></g>
+	</g>
+	<g id="gnuplot_plot_9" ><title>Subversion</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(1827.9,111.2)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >Subversion</tspan></text>
@@ -948,7 +1020,7 @@
 		L1707.3,669.8 L1710.1,669.8 L1712.8,669.8 L1716.8,669.8 L1719.6,669.7 L1721.1,669.7 L1723.6,669.6 L1728.6,669.6
 		L1739.6,669.5 L1748.5,669.4 L1757.2,669.3 L1759.5,669.3 L1760.6,669.3 L1761.9,669.3 L1764.4,669.3 L1766.1,669.3
 		L1767.6,669.2 L1769.5,669.2 L1770.4,669.2 L1771.3,669.2 L1772.3,669.2 L1773.6,669.2 L1775.0,669.2 L1776.2,669.2
-		L1777.1,669.2 L1778.3,669.2  '/>	<use xlink:href='#gpPt0' transform='translate(281.2,977.1) scale(4.50)' color='rgb(255,   0, 255)'/>
+		L1777.1,669.2 L1778.3,669.2 L1778.7,669.2 L1779.7,669.1  '/>	<use xlink:href='#gpPt0' transform='translate(281.2,977.1) scale(4.50)' color='rgb(255,   0, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(391.7,934.9) scale(4.50)' color='rgb(255,   0, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(615.3,890.6) scale(4.50)' color='rgb(255,   0, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(688.1,682.4) scale(4.50)' color='rgb(255,   0, 255)'/>
@@ -1071,8 +1143,26 @@
 	<use xlink:href='#gpPt0' transform='translate(1776.2,669.2) scale(4.50)' color='rgb(255,   0, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(1777.1,669.2) scale(4.50)' color='rgb(255,   0, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(1778.3,669.2) scale(4.50)' color='rgb(255,   0, 255)'/>
+	<use xlink:href='#gpPt0' transform='translate(1778.7,669.2) scale(4.50)' color='rgb(255,   0, 255)'/>
+	<use xlink:href='#gpPt0' transform='translate(1779.7,669.1) scale(4.50)' color='rgb(255,   0, 255)'/>
 	<use xlink:href='#gpPt0' transform='translate(1857.3,106.7) scale(4.50)' color='rgb(255,   0, 255)'/>
 </g>
+	</g>
+	<g id="gnuplot_plot_10" ><title>gnuplot_plot_10</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(255,   0, 255)' stroke-dasharray='2.5,4.0'  d='M173.5,1044.0 L324.8,966.7 L490.8,879.6 L629.9,797.7 L725.9,740.3 L783.1,707.6 L813.7,691.5 L828.8,684.3
+		L835.9,681.4 L839.4,680.2 L841.3,679.8 L842.7,679.6 L843.9,679.6 L845.4,679.5 L847.3,679.5 L850.2,679.5
+		L854.5,679.4 L860.6,679.2 L868.9,679.1 L879.5,678.9 L892.5,678.6 L907.7,678.3 L924.9,678.0 L943.8,677.7
+		L964.1,677.4 L985.3,677.1 L1007.3,676.7 L1029.6,676.5 L1052.1,676.2 L1074.5,676.0 L1096.7,675.7 L1118.5,675.5
+		L1139.5,675.4 L1159.7,675.2 L1178.9,675.0 L1196.8,674.9 L1213.6,674.8 L1229.3,674.7 L1244.0,674.6 L1257.8,674.4
+		L1271.1,674.3 L1284.0,674.2 L1296.9,674.0 L1309.9,673.8 L1323.4,673.6 L1337.7,673.4 L1352.8,673.1 L1368.9,672.9
+		L1386.2,672.6 L1404.5,672.3 L1423.9,672.0 L1443.9,671.7 L1464.5,671.5 L1485.2,671.3 L1505.7,671.1 L1525.6,670.9
+		L1544.6,670.8 L1562.3,670.7 L1578.7,670.6 L1593.6,670.5 L1606.8,670.4 L1618.5,670.3 L1628.7,670.3 L1637.5,670.2
+		L1645.2,670.2 L1651.8,670.2 L1657.6,670.1 L1662.8,670.1 L1667.6,670.1 L1672.1,670.1 L1676.5,670.0 L1680.7,670.0
+		L1684.8,670.0 L1688.8,670.0 L1692.9,669.9 L1696.9,669.9 L1700.9,669.9 L1705.0,669.8 L1709.2,669.8 L1713.6,669.8
+		L1718.3,669.7 L1723.2,669.7 L1728.5,669.6 L1734.1,669.6 L1739.9,669.5 L1745.6,669.5 L1751.1,669.4 L1755.9,669.4
+		L1760.0,669.3 L1763.4,669.3 L1766.1,669.3 L1768.3,669.2 L1770.1,669.2 L1771.8,669.2 L1773.3,669.2 L1774.8,669.2
+		L1776.2,669.2 L1777.5,669.2 L1778.6,669.2 L1779.7,669.1  '/></g>
 	</g>
 <g fill="none" color="white" stroke="rgb(255,   0, 255)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
