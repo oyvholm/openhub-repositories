@@ -29,13 +29,12 @@ graph() {
 }
 
 set_svg() {
-	if test "$use_svg" = "1"; then
-		test "$use_zoom" = "1" && { svg_str="-zoom"; } || unset svg_str
-		echo set terminal svg size 1920,1080
-		echo set output \"graph/$filebase$svg_str.svg\"
-		echo set object 1 rect from screen 0, 0, 0 to screen 1, 1, 0 behind
-		echo set object 1 rect fc rgb \"white\" fillstyle solid 1.0
-	fi
+	test "$use_svg" != "1" && return
+	test "$use_zoom" = "1" && { svg_str="-zoom"; } || unset svg_str
+	echo set terminal svg size 1920,1080
+	echo set output \"graph/$filebase$svg_str.svg\"
+	echo set object 1 rect from screen 0, 0, 0 to screen 1, 1, 0 behind
+	echo set object 1 rect fc rgb \"white\" fillstyle solid 1.0
 }
 
 set_yrange() {
