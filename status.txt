@@ -1,29 +1,29 @@
 
-Repository statistics from Open Hub, last updated 2017-03-15 20:13:38 UTC
+Repository statistics from Open Hub, last updated 2017-03-16 16:16:29 UTC
 
 Total number of repositories:
 
-subversion  326778   (45.58%)
-git         295796   (41.26%)
+subversion  326780   (45.58%)
+git         295813   (41.26%)
 cvs          62824    (8.76%)
 mercurial    18394    (2.57%)
 bazaar       13102    (1.83%)
 ----------  ------  ---------
-Total       716894  (100.00%)
+Total       716913  (100.00%)
 
 New repositories since 2014-08-05 01:41:02 UTC:
 
-git          44879   (94.83%)
-subversion    1642    (3.47%)
+git          44896   (94.83%)
+subversion    1644    (3.47%)
 mercurial      559    (1.18%)
 bazaar         169    (0.36%)
 cvs             78    (0.16%)
 ----------  ------  ---------
-Total        47327  (100.00%)
+Total        47346  (100.00%)
 
 New repositories per week:
 
     bazaar         cvs         git   mercurial  subversion
 ----------  ----------  ----------  ----------  ----------
-      1.24        0.57      329.38        4.10       12.05
+      1.24        0.57      329.22        4.10       12.06
 
