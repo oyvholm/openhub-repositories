@@ -11,7 +11,7 @@
 #==============================================================================
 
 progname=plot-graph
-VERSION=0.5.0
+VERSION=0.6.0
 
 test "$1" = "--bezier" && { use_bezier=1; shift; } || unset use_bezier
 test "$1" = "--svg" && { use_svg=1; shift; } || unset use_svg
@@ -25,7 +25,7 @@ graph() {
 	local title=$3
 	printf '"%s" using 1:%u title "%s" ' "$file" "$column" "$title"
 	if test -z "$use_bezier"; then
-		echo -n w lp pt 1 lt rgb \"$lt\"
+		echo -n w l lt rgb \"$lt\"
 		printf ', "%s" using 1:%u notitle ' \
 		       "$file" "$column"
 		echo w l s b dt 2 lt rgb \"$lt\"
