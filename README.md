@@ -33,9 +33,11 @@ Usage
 - **`make`**<br />
   Create `repos.sql` and `repos.sqlite`, update and view status.txt.
 - **`make plot`**<br />
-  Generate Gnuplot graph.
+  Generate relative Gnuplot graph.
 - **`make bezier`**<br />
   Same as `make plot`, but use Bézier smoothing.
+- **`make abs`**<br />
+  Generate absolute plot. Not as detailed as the relative plot.
 - **`make status`**<br />
   Create some tables with statistics.
 - **`make repos.sqlite`**<br />

@@ -26,6 +26,10 @@ graph/relative.svg: relative.dat Makefile
 graph/relative-zoom.svg: relative.dat Makefile
 	./plot-graph --svg --zoom relative.dat
 
+.PHONY: abs
+abs:
+	./plot-graph repos.dat
+
 .PHONY: bezier
 bezier: relative.dat
 	./plot-graph --bezier relative.dat
