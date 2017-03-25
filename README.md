@@ -37,6 +37,9 @@ Usage
   Generate relative Gnuplot graph.
 - **`make bezier`**<br />
   Same as `make plot`, but use Bézier smoothing.
+- **`make zoom`**<br />
+  Generate zoomed-in relative Gnuplot graph to show the differences 
+  between Bazaar, CVS, Mercurial and Subversion.
 - **`make abs`**<br />
   Generate absolute plot. Not as detailed as the relative plot.
 - **`make status`**<br />

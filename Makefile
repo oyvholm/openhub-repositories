@@ -70,3 +70,7 @@ svg: graph/repos.svg graph/relative.svg graph/relative-zoom.svg
 .PHONY: update
 update:
 	./get-new-stats.py
+
+.PHONY: zoom
+zoom: relative.dat
+	./plot-graph --zoom relative.dat
