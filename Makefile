@@ -2,7 +2,12 @@
 # File ID: 3eaf2bda-20dd-11e4-a0e2-c80aa9e67bbd
 
 .PHONY: default
-default: status
+default: README.html status
+
+README.html: README.md
+	printf '<html><head><title>README</title></head><body>\n' >README.html
+	cmark -t html README.md >>README.html
+	printf '</body></html>\n' >>README.html
 
 relative.dat: repos.dat repos.sqlite Makefile
 	./convert-to-relative repos.dat >relative.dat
@@ -36,7 +41,7 @@ bezier: relative.dat
 
 .PHONY: clean
 clean:
-	rm -fv relative.dat repos.sql repos.sqlite
+	rm -fv README.html relative.dat repos.sql repos.sqlite
 
 .PHONY: dups
 dups:

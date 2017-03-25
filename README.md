@@ -31,7 +31,8 @@ Usage
 - **`make update`**<br />
   Update `repos.dat` with new data from `openhub.net`.
 - **`make`**<br />
-  Create `repos.sql` and `repos.sqlite`, update and view status.txt.
+  Create `repos.sql`, `repos.sqlite` and `README.html`, update and view 
+  status.txt.
 - **`make plot`**<br />
   Generate relative Gnuplot graph.
 - **`make bezier`**<br />
@@ -46,6 +47,8 @@ Usage
   Create repos.sql.
 - **`make svg`**<br />
   Create SVG plots in `graph/`.
+- **`make README.html`**<br />
+  Create `README.html` from `README.md`.
 - **`make dups`**<br />
   If there are no updates, execute this to store the new entry in 
   `dups.dat`. This is to avoid polluting `repos.dat` with duplicates, 
@@ -65,6 +68,7 @@ These programs are necessary to run the various `make` commands or
 - Python v3
 - /bin/sh, found on most \*nix variants
 - Perl
+- cmark, CommonMark parser to generate `README.html`
 
 Download
 --------
