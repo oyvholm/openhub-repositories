@@ -2,7 +2,12 @@
 # File ID: 3eaf2bda-20dd-11e4-a0e2-c80aa9e67bbd
 
 .PHONY: default
-default: status
+default: README.html status
+
+README.html: README.md
+	printf '<html><head><title>README</title></head><body>\n' >README.html
+	cmark -t html README.md >>README.html
+	printf '</body></html>\n' >>README.html
 
 relative.dat: repos.dat repos.sqlite Makefile
 	./convert-to-relative repos.dat >relative.dat
@@ -26,13 +31,18 @@ graph/relative.svg: relative.dat Makefile
 graph/relative-zoom.svg: relative.dat Makefile
 	./plot-graph --svg --zoom relative.dat
 
+.PHONY: abs
+abs:
+	./plot-graph repos.dat
+
 .PHONY: bezier
 bezier: relative.dat
 	./plot-graph --bezier relative.dat
 
 .PHONY: clean
 clean:
-	rm -fv relative.dat repos.sql repos.sqlite
+	rm -fv README.html relative.dat repos.sql repos.sqlite
+	touch repos.dat
 
 .PHONY: dups
 dups:
@@ -68,3 +78,7 @@ svg: graph/repos.svg graph/relative.svg graph/relative-zoom.svg
 .PHONY: update
 update:
 	./get-new-stats.py
+
+.PHONY: zoom
+zoom: relative.dat
+	./plot-graph --zoom relative.dat

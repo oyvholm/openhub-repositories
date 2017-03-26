@@ -11,7 +11,7 @@
 #==============================================================================
 
 progname=textreport
-VERSION=0.3.2
+VERSION=0.3.3
 
 db=repos.sqlite
 
@@ -73,7 +73,8 @@ latest() {
 }
 
 echo
-echo Repository statistics from Open Hub, last updated $(
+echo "Repository statistics from Open Hub <https://openhub.net>"
+echo Last updated $(
     sqlite3 "$db" "SELECT max(date) FROM repos;"
 ) UTC
 

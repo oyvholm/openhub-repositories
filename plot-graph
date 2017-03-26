@@ -11,7 +11,7 @@
 #==============================================================================
 
 progname=plot-graph
-VERSION=0.6.0
+VERSION=0.7.0
 
 test "$1" = "--bezier" && { use_bezier=1; shift; } || unset use_bezier
 test "$1" = "--svg" && { use_svg=1; shift; } || unset use_svg
@@ -37,7 +37,7 @@ graph() {
 set_svg() {
 	test "$use_svg" != "1" && return
 	test "$use_zoom" = "1" && { svg_str="-zoom"; } || unset svg_str
-	echo set terminal svg size 1920,1080
+	echo set terminal svg size 1189,841
 	echo set output \"graph/$filebase$svg_str.svg\"
 	echo set object 1 rect from screen 0, 0, 0 to screen 1, 1, 0 behind
 	echo set object 1 rect fc rgb \"white\" fillstyle solid 1.0
