@@ -53,7 +53,6 @@ dups:
 .PHONY: merge-master
 merge-master:
 	git merge master || true
-	rm status.txt graph/*
 	$(MAKE) clean status svg
 	git add -u
 
