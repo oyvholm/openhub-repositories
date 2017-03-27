@@ -45,8 +45,8 @@ clean:
 	touch repos.dat
 
 .PHONY: commit
-commit: clean update status svg
-	git add repos.dat status.txt graph/*.svg
+commit: clean update status
+	git add repos.dat status.txt
 	git ci -m "$$( \
 	  printf 'Updates from openhub.net\n\n%s\n\n%s' \
 	         "$$(./new-since)" \
