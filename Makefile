@@ -44,6 +44,15 @@ clean:
 	rm -fv README.html relative.dat repos.sql repos.sqlite
 	touch repos.dat
 
+.PHONY: commit
+commit: clean update status
+	git add repos.dat status.txt
+	git ci -m "$$( \
+	  printf 'Updates from openhub.net\n\n%s\n\n%s' \
+	         "$$(./new-since)" \
+	         "$$(suuid -t commit)" \
+	)"
+
 .PHONY: dups
 dups:
 	cat repos.dat >>dups.dat
