@@ -42,6 +42,7 @@ bezier: relative.dat
 .PHONY: clean
 clean:
 	rm -fv README.html relative.dat repos.sql repos.sqlite
+	rm -fv *.tmp
 	touch repos.dat
 
 .PHONY: commit
