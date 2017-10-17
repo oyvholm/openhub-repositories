@@ -78,6 +78,9 @@ sort:
 .PHONY: svg
 svg: graph/repos.svg graph/relative.svg graph/relative-zoom.svg
 
+.PHONY: test
+test:
+
 .PHONY: update
 update:
 	./get-new-stats.py
